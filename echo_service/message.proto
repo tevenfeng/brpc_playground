@@ -1,0 +1,18 @@
+syntax="proto2";
+package examples;
+
+option cc_generic_services = true;
+
+message EchoRequest {
+    required string user_name = 1;
+    optional string user_email = 2;
+};
+
+message EchoResponse {
+    required string response_message = 1;
+};
+
+// 定义rpc形式
+service EchoService {
+    rpc Echo(EchoRequest) returns (EchoResponse);
+};

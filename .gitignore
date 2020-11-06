@@ -1,0 +1,5 @@
+build
+*.pb.h
+*.pb.cc
+.vscode
+.DS_Store
